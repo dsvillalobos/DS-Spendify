@@ -6,7 +6,7 @@ class Header extends HTMLElement {
         <header class="mb-4 sticky-top">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-            <a class="fs-2 fw-bold navbar-brand scale-in-center" href="/index.html">
+            <a class="fs-2 fw-bold navbar-brand" href="/index.html">
                 <i class="fa-solid fa-wallet"></i>
                 DS Spendify
             </a>
