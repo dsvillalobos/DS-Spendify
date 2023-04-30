@@ -29,6 +29,9 @@ class Header extends HTMLElement {
                     >
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="/Pages/Profile.html">Profile</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="/Pages/About.html">About</a>
                 </li>
                 </ul>
@@ -78,10 +81,10 @@ class Categories extends HTMLElement {
             <li class="list-group-item py-3">
               <a
                 class="text-decoration-none text-dark"
-                href="/Category/Taxes-and-Fees.html"
+                href="/Category/Financial-Expenses.html"
               >
                 <i class="fa-solid fa-money-check-dollar"></i>
-                Taxes and Fees
+                Financial Expenses
               </a>
             </li>
             <li class="list-group-item py-3">
@@ -188,3 +191,116 @@ class Form extends HTMLElement {
 }
 
 customElements.define("import-form", Form);
+
+class About extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `
+        <!-- Copyright -->
+        <h2 class="fs-4 mb-2">Copyright</h2>
+        <p class="mb-4">© dsvillalobos</p>
+        <!-- Version -->
+        <h2 class="fs-4 mb-2">Version</h2>
+        <p class="mb-4">DS Spendify Version 0.1.3</p>
+        <!-- Follow Me -->
+        <h2 class="fs-4 mb-2">Follow Me</h2>
+        <p class="mb-4">
+          <a
+            class="text-decoration-none text-dark"
+            target="_blank"
+            href="https://www.instagram.com/_dsvillalobos_/"
+          >
+            <i class="fa-brands fa-instagram"></i>
+            Instagram
+          </a>
+          <br />
+          <a
+            class="text-decoration-none text-dark"
+            target="_blank"
+            href="https://twitter.com/_dsvillalobos_"
+          >
+            <i class="fa-brands fa-twitter"></i>
+            Twitter
+          </a>
+          <br />
+          <a
+            class="text-decoration-none text-dark"
+            target="_blank"
+            href="https://github.com/dsvillalobos"
+          >
+            <i class="fa-brands fa-github"></i>
+            GitHub
+          </a>
+        </p>
+    `;
+  }
+}
+
+customElements.define("import-about", About);
+
+class Overview extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `
+        <div class="text-center mb-4">
+          <div class="row">
+            <div class="col">
+              <h3 class="fs-5">Income</h3>
+              <span id="incomeSpan" class="fst-italic"></span>
+            </div>
+            <div class="col">
+              <h3 class="fs-5">Expenses</h3>
+              <span id="expensesSpan" class="fst-italic text-danger"></span>
+            </div>
+            <div class="col">
+              <h3 class="fs-5">Balance</h3>
+              <span id="balanceSpan" class="fst-italic text-success"></span>
+              <br>
+              <span id="balanceSpanMsg" class="fst-italic text-danger"></span>
+            </div>
+          </div>
+        </div>
+    `;
+  }
+}
+
+customElements.define("import-overview", Overview);
+
+class profileFormClass extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `
+        <div class="row mb-4">
+          <div class="col-md-8 mx-auto">
+            <form id="profileForm" autocomplete="off">
+              <!-- Username -->
+              <div class="form-group mb-3">
+                <label for="username" class="mb-1">Username:</label>
+                <input type="text" id="username" class="form-control" required />
+              </div>
+              <!-- Income -->
+              <div class="form-group mb-3">
+                <label for="income" class="mb-1">Income ($):</label>
+                <input type="number" id="income" class="form-control" required />
+              </div>
+              <!-- Saving Target -->
+              <div class="form-group mb-3">
+                <label for="savingTarget" class="mb-1">Saving Target ($):</label>
+                <input
+                  type="number"
+                  id="savingTarget"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <!-- Save Button -->
+              <div class="d-grid gap-2 mb-4">
+                <button type="submit" class="btn btn-primary" id="save-button">
+                  Save Profile
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+    `;
+  }
+}
+
+customElements.define("import-profile-form", profileFormClass);

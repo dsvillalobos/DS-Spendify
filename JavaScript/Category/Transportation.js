@@ -7,8 +7,10 @@ const expenseList = document.getElementById("expenseList");
 //Submit Expense Form
 expenseForm.addEventListener("submit", addExpense);
 
+let totalAmount = 0;
+
 function addExpense() {
-  event.preventDefault();
+  location.reload();
 
   //Values
   const expenseName = document.getElementById("expenseName").value;
@@ -66,10 +68,13 @@ function updateExpenseList(expenses) {
       expenses.splice(index, 1);
       localStorage.setItem("transportation", JSON.stringify(expenses));
       updateExpenseList(expenses);
+      location.reload();
     });
 
     expenseItem.appendChild(deleteButton);
     expenseList.appendChild(expenseItem);
+
+    totalAmount += parseInt(expense.amount);
   });
 }
 
@@ -83,3 +88,4 @@ if (localStorage.getItem("transportation") === null) {
 }
 
 updateExpenseList(expenses);
+localStorage.setItem("transportationTOT", totalAmount);

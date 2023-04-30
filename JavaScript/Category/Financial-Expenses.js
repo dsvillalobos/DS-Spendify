@@ -7,8 +7,10 @@ const expenseList = document.getElementById("expenseList");
 //Submit Expense Form
 expenseForm.addEventListener("submit", addExpense);
 
+let totalAmount = 0;
+
 function addExpense() {
-  event.preventDefault();
+  location.reload();
 
   //Values
   const expenseName = document.getElementById("expenseName").value;
@@ -25,17 +27,17 @@ function addExpense() {
   //Check Expenses in the Local Storage
   let expenses;
 
-  if (localStorage.getItem("TaxesAndFees") === null) {
+  if (localStorage.getItem("financialExpenses") === null) {
     expenses = [];
   } else {
-    expenses = JSON.parse(localStorage.getItem("TaxesAndFees"));
+    expenses = JSON.parse(localStorage.getItem("financialExpenses"));
   }
 
   //Add Expense
   expenses.push(expense);
 
   //Store Expenses
-  localStorage.setItem("TaxesAndFees", JSON.stringify(expenses));
+  localStorage.setItem("financialExpenses", JSON.stringify(expenses));
 
   //Reset Expense Form
   expenseForm.reset();
@@ -64,22 +66,26 @@ function updateExpenseList(expenses) {
 
     deleteButton.addEventListener("click", () => {
       expenses.splice(index, 1);
-      localStorage.setItem("TaxesAndFees", JSON.stringify(expenses));
+      localStorage.setItem("financialExpenses", JSON.stringify(expenses));
       updateExpenseList(expenses);
+      location.reload();
     });
 
     expenseItem.appendChild(deleteButton);
     expenseList.appendChild(expenseItem);
+
+    totalAmount += parseInt(expense.amount);
   });
 }
 
 //Check Expenses in Local Storage and Update the Expense List
 let expenses;
 
-if (localStorage.getItem("TaxesAndFees") === null) {
+if (localStorage.getItem("financialExpenses") === null) {
   expenses = [];
 } else {
-  expenses = JSON.parse(localStorage.getItem("TaxesAndFees"));
+  expenses = JSON.parse(localStorage.getItem("financialExpenses"));
 }
 
 updateExpenseList(expenses);
+localStorage.setItem("financialExpensesTOT", totalAmount);
