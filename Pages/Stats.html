@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US" translate="no">
   <head>
-    <title>DS Spendify</title>
+    <title>DS Spendify | Stats</title>
     <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
@@ -30,6 +30,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- Chart.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <!-- Character Encoding -->
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
     <!-- Viewport -->
@@ -46,29 +48,21 @@
     <import-header></import-header>
     <!-- Main Container -->
     <main class="container">
+      <!-- Title -->
+      <div class="text-center fs-1 mb-4">
+        <i class="fa-solid fa-chart-simple"></i>
+        <h1>Stats</h1>
+      </div>
       <!-- Subheading -->
-      <h2 class="fs-4 mb-4">
-        Welcome<span id="usernameSpan"></span>. Track Your Expenses With Ease
-      </h2>
-      <!-- Description -->
-      <p class="mb-4 fst-italic">
-        DS Spendify is the ultimate expense tracking app that helps you take
-        control of your finances. You can easily track and categorize your
-        expenses, and you can monitor your progress over time. Whether you're
-        trying to save money, stick to a budget, or just want to keep an eye on
-        your finances, DS Spendify makes it simple and hassle-free.
-      </p>
-      <!-- Overview -->
-      <h2 class="fs-4 mb-3">Overview</h2>
-      <!-- Overview -->
-      <import-overview></import-overview>
-      <!-- Categories -->
-      <h2 class="fs-4 mb-3">Categories</h2>
-      <!-- Categories -->
-      <import-categories></import-categories>
+      <p class="text-center fst-italic mb-4">sakjskajskjs</p>
+      <!-- Stats Table -->
+      <import-stats-table></import-stats-table>
+      <!-- Charts -->
+      <h2 class="fs-4 mb-3">Charts</h2>
+      <import-charts></import-charts>
     </main>
     <!-- JavaScript -->
-    <!-- Index -->
-    <script src="/JavaScript/Index.js"></script>
+    <!-- Stats -->
+    <script src="/JavaScript/Stats.js"></script>
   </body>
 </html>

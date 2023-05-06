@@ -3,3 +3,10 @@
 body {
   margin: 0%;
 }
+
+input,
+input:active,
+.navbar button {
+  outline: none !important;
+  box-shadow: none !important;
+}

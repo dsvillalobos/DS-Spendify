@@ -29,6 +29,9 @@ class Header extends HTMLElement {
                     >
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="/Pages/Stats.html">Stats</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="/Pages/Profile.html">Profile</a>
                 </li>
                 <li class="nav-item">
@@ -200,7 +203,7 @@ class About extends HTMLElement {
         <p class="mb-4">© dsvillalobos</p>
         <!-- Version -->
         <h2 class="fs-4 mb-2">Version</h2>
-        <p class="mb-4">DS Spendify Version 0.1.3</p>
+        <p class="mb-4">DS Spendify Version 0.1.4</p>
         <!-- Follow Me -->
         <h2 class="fs-4 mb-2">Follow Me</h2>
         <p class="mb-4">
@@ -304,3 +307,113 @@ class profileFormClass extends HTMLElement {
 }
 
 customElements.define("import-profile-form", profileFormClass);
+
+class statsTable extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `
+        <table class="table mb-4">
+          <thead>
+            <tr>
+              <th class="table-dark">Category</th>
+              <th class="table-dark">Expenses ($)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <i class="fa-solid fa-money-bill-wave"></i>
+                Basic Expenses
+              </td>
+              <td id="basicExpensesCell" class="fst-italic"></td>
+            </tr>
+            <tr>
+              <td>
+                <i class="fa-solid fa-cart-shopping"></i>
+                Supermarket
+              </td>
+              <td id="supermarketCell" class="fst-italic"></td>
+            </tr>
+            <tr>
+              <td>
+                <i class="fa-solid fa-heart-pulse"></i>
+                Health
+              </td>
+              <td id="healthCell" class="fst-italic"></td>
+            </tr>
+            <tr>
+              <td>
+                <i class="fa-solid fa-money-check-dollar"></i>
+                Financial Expenses
+              </td>
+              <td id="financialExpensesCell" class="fst-italic"></td>
+            </tr>
+            <tr>
+              <td>
+                <i class="fa-solid fa-plane"></i>
+                Travel
+              </td>
+              <td id="travelCell" class="fst-italic"></td>
+            </tr>
+            <tr>
+              <td>
+                <i class="fa-solid fa-pizza-slice"></i>
+                Food
+              </td>
+              <td id="foodCell" class="fst-italic"></td>
+            </tr>
+            <tr>
+              <td>
+                <i class="fa-solid fa-film"></i>
+                Entertainment
+              </td>
+              <td id="entertainmentCell" class="fst-italic"></td>
+            </tr>
+            <tr>
+              <td>
+                <i class="fa-solid fa-graduation-cap"></i>
+                Education
+              </td>
+              <td id="educationCell" class="fst-italic"></td>
+            </tr>
+            <tr>
+              <td>
+                <i class="fa-solid fa-car"></i>
+                Transportation
+              </td>
+              <td id="transportationCell" class="fst-italic"></td>
+            </tr>
+            <tr>
+              <td>
+                <i class="fa-solid fa-dog"></i>
+                Pet Expenses
+              </td>
+              <td id="petExpensesCell" class="fst-italic"></td>
+            </tr>
+          </tbody>
+        </table>
+    `;
+  }
+}
+
+customElements.define("import-stats-table", statsTable);
+
+class Charts extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `
+        <div class="text-center row">
+          <!-- Bar Chart-->
+          <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <h3 class="fs-5 mb-3">Bar Chart</h3>
+            <canvas class="mb-4" id="barChart" width="175" height="175"></canvas>
+          </div>
+          <!-- Pie Chart -->
+          <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <h3 class="fs-5 mb-3">Pie Chart</h3>
+            <canvas class="mb-4" id="pieChart" width="175" height="175"></canvas>
+          </div>
+        </div>
+    `;
+  }
+}
+
+customElements.define("import-charts", Charts);
