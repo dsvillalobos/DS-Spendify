@@ -1,7 +1,7 @@
 //JavaScript
 
 let basicExpensesTOT = parseInt(localStorage.getItem("basicExpensesTOT"));
-let supermarketTOT = parseInt(localStorage.getItem("supermarketTOT"));
+let shoppingTOT = parseInt(localStorage.getItem("shoppingTOT"));
 let healthTOT = parseInt(localStorage.getItem("healthTOT"));
 let financialExpensesTOT = parseInt(
   localStorage.getItem("financialExpensesTOT")
@@ -18,8 +18,8 @@ function init() {
     basicExpensesTOT = 0;
   }
 
-  if (isNaN(supermarketTOT)) {
-    supermarketTOT = 0;
+  if (isNaN(shoppingTOT)) {
+    shoppingTOT = 0;
   }
 
   if (isNaN(healthTOT)) {
@@ -56,7 +56,7 @@ function init() {
 
   document.getElementById("basicExpensesCell").innerHTML =
     "$" + basicExpensesTOT;
-  document.getElementById("supermarketCell").innerHTML = "$" + supermarketTOT;
+  document.getElementById("shoppingCell").innerHTML = "$" + shoppingTOT;
   document.getElementById("healthCell").innerHTML = "$" + healthTOT;
   document.getElementById("financialExpensesCell").innerHTML =
     "$" + financialExpensesTOT;
@@ -71,7 +71,7 @@ function init() {
 
   const labels = [
     "Basic Expenses",
-    "Supermarket",
+    "Shopping",
     "Health",
     "Financial Expenses",
     "Travel",
@@ -83,21 +83,21 @@ function init() {
   ];
 
   const colors = [
-    "#333533",
-    "#4f5d75",
-    "#c0c0c0",
-    "#607b7d",
-    "#223843",
-    "#595959",
-    "#70798c",
-    "#70587c",
-    "#8d86c9",
-    "#b4b8ab",
+    "#33512A",
+    "#3E6333",
+    "#4A753C",
+    "#558846",
+    "#619A4F",
+    "#6DAA5B",
+    "#7DB46D",
+    "#8EBD7F",
+    "#9EC791",
+    "#AED0A4",
   ];
 
   const data = [
     basicExpensesTOT,
-    supermarketTOT,
+    shoppingTOT,
     healthTOT,
     financialExpensesTOT,
     travelTOT,

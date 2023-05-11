@@ -19,7 +19,7 @@ class Header extends HTMLElement {
                 aria-expanded="false"
                 aria-label="Toggle navigation"
             >
-                <span class="navbar-toggler-icon"></span>
+                <i class="fa-solid fa-bars"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
@@ -66,10 +66,10 @@ class Categories extends HTMLElement {
             <li class="list-group-item py-3">
               <a
                 class="text-decoration-none text-dark"
-                href="/Category/Supermarket.html"
+                href="/Category/Shopping.html"
               >
-                <i class="fa-solid fa-cart-shopping"></i>
-                Supermarket
+                <i class="fa-solid fa-bag-shopping"></i>
+                Shopping
               </a>
             </li>
             <li class="list-group-item py-3">
@@ -203,7 +203,7 @@ class About extends HTMLElement {
         <p class="mb-4">© dsvillalobos</p>
         <!-- Version -->
         <h2 class="fs-4 mb-2">Version</h2>
-        <p class="mb-4">DS Spendify Version 0.1.4</p>
+        <p class="mb-4">DS Spendify Version 0.1.5</p>
         <!-- Follow Me -->
         <h2 class="fs-4 mb-2">Follow Me</h2>
         <p class="mb-4">
@@ -328,10 +328,10 @@ class statsTable extends HTMLElement {
             </tr>
             <tr>
               <td>
-                <i class="fa-solid fa-cart-shopping"></i>
-                Supermarket
+                <i class="fa-solid fa-bag-shopping"></i>
+                Shopping
               </td>
-              <td id="supermarketCell" class="fst-italic"></td>
+              <td id="shoppingCell" class="fst-italic"></td>
             </tr>
             <tr>
               <td>

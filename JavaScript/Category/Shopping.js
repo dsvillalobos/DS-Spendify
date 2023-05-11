@@ -27,17 +27,17 @@ function addExpense() {
   //Check Expenses in the Local Storage
   let expenses;
 
-  if (localStorage.getItem("supermarket") === null) {
+  if (localStorage.getItem("shopping") === null) {
     expenses = [];
   } else {
-    expenses = JSON.parse(localStorage.getItem("supermarket"));
+    expenses = JSON.parse(localStorage.getItem("shopping"));
   }
 
   //Add Expense
   expenses.push(expense);
 
   //Store Expenses
-  localStorage.setItem("supermarket", JSON.stringify(expenses));
+  localStorage.setItem("shopping", JSON.stringify(expenses));
 
   //Reset Expense Form
   expenseForm.reset();
@@ -66,7 +66,7 @@ function updateExpenseList(expenses) {
 
     deleteButton.addEventListener("click", () => {
       expenses.splice(index, 1);
-      localStorage.setItem("supermarket", JSON.stringify(expenses));
+      localStorage.setItem("shopping", JSON.stringify(expenses));
       updateExpenseList(expenses);
       location.reload();
     });
@@ -81,11 +81,11 @@ function updateExpenseList(expenses) {
 //Check Expenses in Local Storage and Update the Expense List
 let expenses;
 
-if (localStorage.getItem("supermarket") === null) {
+if (localStorage.getItem("shopping") === null) {
   expenses = [];
 } else {
-  expenses = JSON.parse(localStorage.getItem("supermarket"));
+  expenses = JSON.parse(localStorage.getItem("shopping"));
 }
 
 updateExpenseList(expenses);
-localStorage.setItem("supermarketTOT", totalAmount);
+localStorage.setItem("shoppingTOT", totalAmount);

@@ -14,7 +14,7 @@ let income = parseInt(localStorage.getItem("income"));
 let savingTarget = parseInt(localStorage.getItem("savingTarget"));
 
 let basicExpensesTOT = parseInt(localStorage.getItem("basicExpensesTOT"));
-let supermarketTOT = parseInt(localStorage.getItem("supermarketTOT"));
+let shoppingTOT = parseInt(localStorage.getItem("shoppingTOT"));
 let healthTOT = parseInt(localStorage.getItem("healthTOT"));
 let financialExpensesTOT = parseInt(
   localStorage.getItem("financialExpensesTOT")
@@ -43,8 +43,8 @@ function init() {
     basicExpensesTOT = 0;
   }
 
-  if (isNaN(supermarketTOT)) {
-    supermarketTOT = 0;
+  if (isNaN(shoppingTOT)) {
+    shoppingTOT = 0;
   }
 
   if (isNaN(healthTOT)) {
@@ -81,7 +81,7 @@ function init() {
 
   expenses =
     basicExpensesTOT +
-    supermarketTOT +
+    shoppingTOT +
     healthTOT +
     financialExpensesTOT +
     travelTOT +
