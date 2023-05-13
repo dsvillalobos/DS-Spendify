@@ -203,7 +203,7 @@ class About extends HTMLElement {
         <p class="mb-4">© dsvillalobos</p>
         <!-- Version -->
         <h2 class="fs-4 mb-2">Version</h2>
-        <p class="mb-4">DS Spendify Version 0.1.5</p>
+        <p class="mb-4">DS Spendify Version 0.1.6</p>
         <!-- Follow Me -->
         <h2 class="fs-4 mb-2">Follow Me</h2>
         <p class="mb-4">
@@ -417,3 +417,38 @@ class Charts extends HTMLElement {
 }
 
 customElements.define("import-charts", Charts);
+
+class dataAnalysis extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `
+        <div class="mb-4">
+          <!-- Saving Tips -->
+          <h3 class="fs-5 mb-2">Saving Tips</h3>
+          <p class="fst-italic mb-1">
+            You've spent
+            <span id="totalSpentSpan" class="fw-bold"></span> on
+            <span id="mostSpentCategorySpan" class="fw-bold"></span>. DS Spendify
+            has tailored these personalized saving tips exclusively for you. We
+            hope these tips will help you achieve your financial goals and make
+            the most of your hard-earned money.
+          </p>
+          <p class="my-0">
+            <details>
+              <summary id="savingTip1Title" class="fw-bold"></summary>
+              <p id="savingTip1Text" class="fst-italic"></p>
+            </details>
+            <details>
+              <summary id="savingTip2Title" class="fw-bold"></summary>
+              <p id="savingTip2Text" class="fst-italic"></p>
+            </details>
+            <details>
+              <summary id="savingTip3Title" class="fw-bold"></summary>
+              <p id="savingTip3Text" class="fst-italic"></p>
+            </details>
+          </p>
+        </div>
+    `;
+  }
+}
+
+customElements.define("import-data-analysis", dataAnalysis);
