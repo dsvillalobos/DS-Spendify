@@ -203,7 +203,7 @@ class About extends HTMLElement {
         <p class="mb-4">© dsvillalobos</p>
         <!-- Version -->
         <h2 class="fs-4 mb-2">Version</h2>
-        <p class="mb-4">DS Spendify Version 0.1.6</p>
+        <p class="mb-4">DS Spendify Version 0.1.7</p>
         <!-- Follow Me -->
         <h2 class="fs-4 mb-2">Follow Me</h2>
         <p class="mb-4">
@@ -424,28 +424,38 @@ class dataAnalysis extends HTMLElement {
         <div class="mb-4">
           <!-- Saving Tips -->
           <h3 class="fs-5 mb-2">Saving Tips</h3>
-          <p class="fst-italic mb-1">
+          <p class="fst-italic mb-2">
             You've spent
             <span id="totalSpentSpan" class="fw-bold"></span> on
             <span id="mostSpentCategorySpan" class="fw-bold"></span>. DS Spendify
-            has tailored these personalized saving tips exclusively for you. We
-            hope these tips will help you achieve your financial goals and make
+            has tailored these personalized Saving Tips exclusively for you. We
+            hope these Tips will help you achieve your financial goals and make
             the most of your hard-earned money.
           </p>
-          <p class="my-0">
-            <details>
-              <summary id="savingTip1Title" class="fw-bold"></summary>
-              <p id="savingTip1Text" class="fst-italic"></p>
-            </details>
-            <details>
-              <summary id="savingTip2Title" class="fw-bold"></summary>
-              <p id="savingTip2Text" class="fst-italic"></p>
-            </details>
-            <details>
-              <summary id="savingTip3Title" class="fw-bold"></summary>
-              <p id="savingTip3Text" class="fst-italic"></p>
-            </details>
-          </p>
+          <div class="card mb-2">
+            <div class="card-body">
+              <details>
+                <summary id="savingTip1Title" class="fw-bold"></summary>
+                <p id="savingTip1Text" class="fst-italic my-0"></p>
+              </details>
+            </div>
+          </div>
+          <div class="card mb-2">
+            <div class="card-body">
+              <details>
+                <summary id="savingTip2Title" class="fw-bold"></summary>
+                <p id="savingTip2Text" class="fst-italic my-0"></p>
+              </details>
+            </div>
+          </div>
+          <div class="card mb-2">
+            <div class="card-body">
+              <details>
+                <summary id="savingTip3Title" class="fw-bold"></summary>
+                <p id="savingTip3Text" class="fst-italic my-0"></p>
+              </details>
+            </div>
+          </div>
         </div>
     `;
   }
