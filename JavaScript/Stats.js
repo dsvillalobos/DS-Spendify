@@ -13,6 +13,18 @@ let educationTOT = parseInt(localStorage.getItem("educationTOT"));
 let transportationTOT = parseInt(localStorage.getItem("transportationTOT"));
 let petExpensesTOT = parseInt(localStorage.getItem("petExpensesTOT"));
 
+let savingTarget = parseInt(localStorage.getItem("savingTarget"));
+let balance = parseInt(localStorage.getItem("balance"));
+const financialPersonalitySpan = document.getElementById(
+  "financialPersonalitySpan"
+);
+const financialPersonalityTitle = document.getElementById(
+  "financialPersonalityTitle"
+);
+const financialPersonalityText = document.getElementById(
+  "financialPersonalityText"
+);
+
 const totalSpentSpan = document.getElementById("totalSpentSpan");
 const mostSpentCategorySpan = document.getElementById("mostSpentCategorySpan");
 
@@ -22,6 +34,8 @@ const savingTip2Title = document.getElementById("savingTip2Title");
 const savingTip2Text = document.getElementById("savingTip2Text");
 const savingTip3Title = document.getElementById("savingTip3Title");
 const savingTip3Text = document.getElementById("savingTip3Text");
+
+const detailsElements = document.querySelectorAll("details");
 
 function init() {
   if (isNaN(basicExpensesTOT)) {
@@ -157,6 +171,30 @@ function init() {
       },
     },
   });
+
+  if (balance >= savingTarget) {
+    financialPersonalitySpan.innerHTML = "The Saver";
+
+    financialPersonalityTitle.innerHTML = "The Saver";
+    financialPersonalityText.innerHTML =
+      "The saver prioritizes saving, focuses on long-term financial security, and practices frugality consistently.";
+  }
+
+  if (balance < savingTarget && balance > 0) {
+    financialPersonalitySpan.innerHTML = "The Spender";
+
+    financialPersonalityTitle.innerHTML = "The Spender";
+    financialPersonalityText.innerHTML =
+      "Spenders prioritize immediate enjoyment over long-term goals, indulging in impulsive purchases and experiences.";
+  }
+
+  if (balance <= 0) {
+    financialPersonalitySpan.innerHTML = "The Debtor";
+
+    financialPersonalityTitle.innerHTML = "The Debtor";
+    financialPersonalityText.innerHTML =
+      "Debtors rely on borrowing and carry significant debt, often struggling with financial management and repayment.";
+  }
 
   let mostSpentCategory = Math.max(
     basicExpensesTOT,
@@ -341,6 +379,16 @@ function init() {
     savingTip3Text.innerHTML =
       "Get creative and make your own pet toys and treats using safe and affordable materials. There are plenty of DIY tutorials and recipes available online that can save you money while still providing entertainment and enjoyment for your pet.";
   }
+
+  detailsElements.forEach((details) => {
+    details.addEventListener("click", () => {
+      detailsElements.forEach((otherDetails) => {
+        if (otherDetails !== details) {
+          otherDetails.removeAttribute("open");
+        }
+      });
+    });
+  });
 }
 
 init();

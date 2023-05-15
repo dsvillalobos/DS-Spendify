@@ -203,7 +203,7 @@ class About extends HTMLElement {
         <p class="mb-4">© dsvillalobos</p>
         <!-- Version -->
         <h2 class="fs-4 mb-2">Version</h2>
-        <p class="mb-4">DS Spendify Version 0.1.7</p>
+        <p class="mb-4">DS Spendify Version 0.1.8</p>
         <!-- Follow Me -->
         <h2 class="fs-4 mb-2">Follow Me</h2>
         <p class="mb-4">
@@ -422,6 +422,22 @@ class dataAnalysis extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
         <div class="mb-4">
+          <!-- Financial Personality -->
+          <h3 class="fs-5 mb-2">Financial Personality</h3>
+          <p class="fst-italic mb-2">
+            Financial Personality is the way you handle money. DS Spendify has
+            checked your Income, Expenses, and your Saving Target and has
+            reached the conclusion that your Financial Personality is
+            <span id="financialPersonalitySpan" class="fw-bold"></span>.
+          </p>
+          <div class="card mb-3">
+            <div class="card-body">
+              <details>
+                <summary id="financialPersonalityTitle" class="fw-bold"></summary>
+                <p id="financialPersonalityText" class="fst-italic my-0"></p>
+              </details>
+            </div>
+          </div>
           <!-- Saving Tips -->
           <h3 class="fs-5 mb-2">Saving Tips</h3>
           <p class="fst-italic mb-2">

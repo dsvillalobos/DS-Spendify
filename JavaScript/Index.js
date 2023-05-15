@@ -93,6 +93,8 @@ function init() {
 
   balance = income - expenses;
 
+  localStorage.setItem("balance", balance);
+
   if (balance >= savingTarget) {
     balanceSpan.classList.add("text-success");
   }
