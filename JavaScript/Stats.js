@@ -13,8 +13,10 @@ let educationTOT = parseInt(localStorage.getItem("educationTOT"));
 let transportationTOT = parseInt(localStorage.getItem("transportationTOT"));
 let petExpensesTOT = parseInt(localStorage.getItem("petExpensesTOT"));
 
+let expenses = 0;
+let balance = 0;
+let income = parseInt(localStorage.getItem("income"));
 let savingTarget = parseInt(localStorage.getItem("savingTarget"));
-let balance = parseInt(localStorage.getItem("balance"));
 const financialPersonalitySpan = document.getElementById(
   "financialPersonalitySpan"
 );
@@ -38,6 +40,14 @@ const savingTip3Text = document.getElementById("savingTip3Text");
 const detailsElements = document.querySelectorAll("details");
 
 function init() {
+  if (isNaN(income)) {
+    income = 1000;
+  }
+
+  if (isNaN(savingTarget)) {
+    savingTarget = 0;
+  }
+
   if (isNaN(basicExpensesTOT)) {
     basicExpensesTOT = 0;
   }
@@ -171,6 +181,22 @@ function init() {
       },
     },
   });
+
+  expenses =
+    basicExpensesTOT +
+    shoppingTOT +
+    healthTOT +
+    financialExpensesTOT +
+    travelTOT +
+    foodTOT +
+    entertainmentTOT +
+    educationTOT +
+    transportationTOT +
+    petExpensesTOT;
+
+  balance = income - expenses;
+
+  localStorage.setItem("balance", balance);
 
   if (balance >= savingTarget) {
     financialPersonalitySpan.innerHTML = "The Saver";
