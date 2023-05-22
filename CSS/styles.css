@@ -2,6 +2,12 @@
 
 body {
   margin: 0% !important;
+  -webkit-tap-highlight-color: transparent !important;
+  -webkit-touch-callout: none !important;
+  user-select: none !important;
+  -moz-user-select: none !important;
+  -webkit-user-select: none !important;
+  overscroll-behavior-y: none !important;
 }
 
 input,
