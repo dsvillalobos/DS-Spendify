@@ -203,7 +203,7 @@ class About extends HTMLElement {
         <p class="mb-4">© dsvillalobos</p>
         <!-- Version -->
         <h2 class="fs-4 mb-2">Version</h2>
-        <p class="mb-4">DS Spendify Version 0.2.1</p>
+        <p class="mb-4">DS Spendify Version 0.2.2</p>
         <!-- Follow Me -->
         <h2 class="fs-4 mb-2">Follow Me</h2>
         <p class="mb-4">
