@@ -53,8 +53,8 @@ class Categories extends HTMLElement {
     this.innerHTML = `
         <div class="row mb-4">
         <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 mb-1">
-          <ul class="list-group fs-6">
-            <li class="list-group-item py-3">
+          <ul class="list-group list-group-flush fs-6">
+            <li class="list-group-item border-bottom py-3">
               <a
                 class="text-decoration-none text-dark"
                 href="/Category/Basic-Expenses.html"
@@ -63,7 +63,7 @@ class Categories extends HTMLElement {
                 Basic Expenses
               </a>
             </li>
-            <li class="list-group-item py-3">
+            <li class="list-group-item border-bottom py-3">
               <a
                 class="text-decoration-none text-dark"
                 href="/Category/Shopping.html"
@@ -72,7 +72,7 @@ class Categories extends HTMLElement {
                 Shopping
               </a>
             </li>
-            <li class="list-group-item py-3">
+            <li class="list-group-item border-bottom py-3">
               <a
                 class="text-decoration-none text-dark"
                 href="/Category/Health.html"
@@ -81,7 +81,7 @@ class Categories extends HTMLElement {
                 Health
               </a>
             </li>
-            <li class="list-group-item py-3">
+            <li class="list-group-item border-bottom py-3">
               <a
                 class="text-decoration-none text-dark"
                 href="/Category/Financial-Expenses.html"
@@ -90,7 +90,7 @@ class Categories extends HTMLElement {
                 Financial Expenses
               </a>
             </li>
-            <li class="list-group-item py-3">
+            <li class="list-group-item border-bottom py-3">
               <a
                 class="text-decoration-none text-dark"
                 href="/Category/Travel.html"
@@ -102,8 +102,8 @@ class Categories extends HTMLElement {
           </ul>
         </div>
         <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 mb-1">
-          <ul class="list-group fs-6">
-            <li class="list-group-item py-3">
+          <ul class="list-group list-group-flush fs-6">
+            <li class="list-group-item border-bottom py-3">
               <a
                 class="text-decoration-none text-dark"
                 href="/Category/Food.html"
@@ -112,7 +112,7 @@ class Categories extends HTMLElement {
                 Food
               </a>
             </li>
-            <li class="list-group-item py-3">
+            <li class="list-group-item border-bottom py-3">
               <a
                 class="text-decoration-none text-dark"
                 href="/Category/Entertainment.html"
@@ -121,7 +121,7 @@ class Categories extends HTMLElement {
                 Entertainment
               </a>
             </li>
-            <li class="list-group-item py-3">
+            <li class="list-group-item border-bottom py-3">
               <a
                 class="text-decoration-none text-dark"
                 href="/Category/Education.html"
@@ -130,7 +130,7 @@ class Categories extends HTMLElement {
                 Education
               </a>
             </li>
-            <li class="list-group-item py-3">
+            <li class="list-group-item border-bottom py-3">
               <a
                 class="text-decoration-none text-dark"
                 href="/Category/Transportation.html"
@@ -139,7 +139,7 @@ class Categories extends HTMLElement {
                 Transportation
               </a>
             </li>
-            <li class="list-group-item py-3">
+            <li class="list-group-item border-bottom py-3">
               <a
                 class="text-decoration-none text-dark"
                 href="/Category/Pet-Expenses.html"
@@ -203,7 +203,7 @@ class About extends HTMLElement {
         <p class="mb-4">© dsvillalobos</p>
         <!-- Version -->
         <h2 class="fs-4 mb-2">Version</h2>
-        <p class="mb-4">DS Spendify Version 0.2.3</p>
+        <p class="mb-4">DS Spendify Version 0.2.4</p>
         <!-- Follow Me -->
         <h2 class="fs-4 mb-2">Follow Me</h2>
         <p class="mb-4">
