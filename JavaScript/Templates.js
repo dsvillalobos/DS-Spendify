@@ -198,12 +198,12 @@ customElements.define("import-form", Form);
 class About extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-        <!-- Copyright -->
-        <h2 class="fs-4 mb-2">Copyright</h2>
-        <p class="mb-4">© dsvillalobos</p>
+        <!-- Created By -->
+        <h2 class="fs-4 mb-2">Created By</h2>
+        <p class="mb-4">dsvillalobos</p>
         <!-- Version -->
         <h2 class="fs-4 mb-2">Version</h2>
-        <p class="mb-4">DS Spendify Version 0.2.4</p>
+        <p class="mb-4">DS Spendify Version 0.2.5</p>
         <!-- Follow Me -->
         <h2 class="fs-4 mb-2">Follow Me</h2>
         <p class="mb-4">
@@ -224,16 +224,21 @@ class About extends HTMLElement {
             <i class="fa-brands fa-twitter"></i>
             Twitter
           </a>
-          <br />
-          <a
-            class="text-decoration-none text-dark"
-            target="_blank"
-            href="https://github.com/dsvillalobos"
-          >
-            <i class="fa-brands fa-github"></i>
-            GitHub
-          </a>
         </p>
+        <!-- Special Thanks To -->
+        <h2 class="fs-4 mb-2">Special Thanks To</h2>
+        <ul>
+          <li>lui.gg_</li>
+          <li>mrodaas</li>
+          <li>Jimmy</li>
+          <li>Edu</li>
+        </ul>
+        <!-- Need Help? -->
+        <h2 class="fs-4 mb-2">Need Help?</h2>
+        <p class="mb-4"><a class="text-dark" target="_blank" href="">You can always go to the Help Center.</a></p>
+        <!-- Copyright -->
+        <h2 class="fs-4 mb-2">Copyright</h2>
+        <p class="mb-4">© dsvillalobos</p>
     `;
   }
 }
