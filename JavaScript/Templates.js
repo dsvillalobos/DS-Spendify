@@ -203,7 +203,7 @@ class About extends HTMLElement {
         <p class="mb-4">dsvillalobos</p>
         <!-- Version -->
         <h2 class="fs-4 mb-2">Version</h2>
-        <p class="mb-4">DS Spendify Version 0.2.6</p>
+        <p class="mb-4">DS Spendify Version 0.2.7</p>
         <!-- Follow Me -->
         <h2 class="fs-4 mb-2">Follow Me</h2>
         <p class="mb-4">
@@ -225,14 +225,6 @@ class About extends HTMLElement {
             Twitter
           </a>
         </p>
-        <!-- Special Thanks To -->
-        <h2 class="fs-4 mb-2">Special Thanks To</h2>
-        <ul>
-          <li>lui.gg_</li>
-          <li>mrodaas</li>
-          <li>Jimmy</li>
-          <li>Edu</li>
-        </ul>
         <!-- Need Help? -->
         <h2 class="fs-4 mb-2">Need Help?</h2>
         <p class="mb-4"><a class="text-dark" target="_blank" href="https://ds-spendify-home.netlify.app/help-center.html">You can always go to the Help Center.</a></p>
