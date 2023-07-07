@@ -415,6 +415,29 @@ function init() {
       });
     });
   });
+
+  let date = new Date();
+  const dateSpan = document.getElementById("dateSpan");
+
+  let month = date.getMonth() + 1;
+  let day = date.getDate();
+  let year = date.getFullYear();
+
+  dateSpan.innerHTML = "Retrieved on: " + month + "-" + day + "-" + year;
 }
 
 init();
+
+function exportDataAsImage() {
+  let dataToExport = document.getElementById("dataToExport");
+
+  html2canvas(dataToExport).then(function (canvas) {
+    let dataURL = canvas.toDataURL("image/png");
+
+    let link = document.createElement("a");
+    link.href = dataURL;
+    link.download = "DS-Spendify-Stats.png";
+
+    link.click();
+  });
+}

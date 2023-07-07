@@ -32,6 +32,8 @@
     />
     <!-- Chart.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <!-- HTML2Canvas -->
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <!-- Character Encoding -->
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
     <!-- Viewport -->
@@ -60,11 +62,22 @@
         Gain insights into your finances, visualize expenses by category, and
         receive personalized saving tips to help you achieve financial success.
       </p>
-      <!-- Stats Table -->
-      <import-stats-table></import-stats-table>
-      <!-- Charts -->
-      <h2 class="fs-4 mb-3">Charts</h2>
-      <import-charts></import-charts>
+      <!-- Stats Table and Charts -->
+      <div id="dataToExport" class="mb-4">
+        <!-- Stats Table -->
+        <import-stats-table></import-stats-table>
+        <!-- Charts -->
+        <h2 class="fs-4 mb-3">Charts</h2>
+        <import-charts></import-charts>
+        <!-- Generated on: -->
+        <span id="dateSpan" class="fst-italic"></span>
+      </div>
+      <!-- Export Data as Image Button -->
+      <div class="d-grid gap-2 mb-4">
+        <button class="btn btn-primary" onclick="exportDataAsImage()">
+          Export Data as Image
+        </button>
+      </div>
       <!-- Data Analysis -->
       <h2 class="fs-4 mb-3">Data Analysis</h2>
       <import-data-analysis></import-data-analysis>

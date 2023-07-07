@@ -17,8 +17,9 @@ _DS Spendify is an expense tracking app designed to simplify your financial mana
 ![DS Spendiy Stats Page](/Images/Screenshots/SS-Stats-1.png)
 ![DS Spendiy Stats Page](/Images/Screenshots/SS-Stats-2.png)
 
-## Release Notes 0.2.7
+## Release Notes 0.2.8
 
 - PWA Implementation.
 - Better Performance.
 - Bug Fixes.
+- New "Export Data as Image" Button.

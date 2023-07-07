@@ -1,6 +1,6 @@
 //JavaScript
 
-//DS Spendify Version 0.2.7
+//DS Spendify Version 0.2.8
 
 self.addEventListener("install", (e) => {
   e.waitUntil(
@@ -59,6 +59,8 @@ self.addEventListener("install", (e) => {
 
         //Chart.JS
         "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js",
+        //HTML2Canvas
+        "https://html2canvas.hertzen.com/dist/html2canvas.min.js",
       ]);
     })
   );
