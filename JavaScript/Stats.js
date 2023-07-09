@@ -41,7 +41,7 @@ const detailsElements = document.querySelectorAll("details");
 
 function init() {
   if (isNaN(income)) {
-    income = 1000;
+    income = 1;
   }
 
   if (isNaN(savingTarget)) {

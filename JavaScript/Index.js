@@ -32,7 +32,7 @@ function init() {
   }
 
   if (isNaN(income)) {
-    income = 1000;
+    income = 1;
   }
 
   if (isNaN(savingTarget)) {

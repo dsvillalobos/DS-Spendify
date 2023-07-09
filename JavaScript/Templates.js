@@ -178,7 +178,7 @@ class Form extends HTMLElement {
             </div>
             <div class="form-group mb-3">
               <label for="amount" class="mb-1">Amount ($):</label>
-              <input type="number" id="amount" class="form-control" required />
+              <input type="number" id="amount" class="form-control" required min="1" />
             </div>
             <!-- Add Expense Button -->
             <div class="d-grid gap-2 mb-4">
@@ -203,7 +203,7 @@ class About extends HTMLElement {
         <p class="mb-4">dsvillalobos</p>
         <!-- Version -->
         <h2 class="fs-4 mb-2">Version</h2>
-        <p class="mb-4">DS Spendify Version 0.2.8</p>
+        <p class="mb-4">DS Spendify Version 0.2.9</p>
         <!-- Follow Me -->
         <h2 class="fs-4 mb-2">Follow Me</h2>
         <p class="mb-4">
@@ -278,7 +278,13 @@ class profileFormClass extends HTMLElement {
               <!-- Income -->
               <div class="form-group mb-3">
                 <label for="income" class="mb-1">Income ($):</label>
-                <input type="number" id="income" class="form-control" required />
+                <input
+                  type="number"
+                  id="income"
+                  class="form-control"
+                  required
+                  min="1"
+                />
               </div>
               <!-- Saving Target -->
               <div class="form-group mb-3">
@@ -288,6 +294,7 @@ class profileFormClass extends HTMLElement {
                   id="savingTarget"
                   class="form-control"
                   required
+                  min="0"
                 />
               </div>
               <!-- Save Button -->
@@ -298,9 +305,18 @@ class profileFormClass extends HTMLElement {
               </div>
               <!-- Delete Data Button -->
               <div class="d-grid gap-2 mb-4">
-                <button type="reset" class="btn btn-danger" id="deleteData-button">
+                <button
+                  type="reset"
+                  class="btn btn-danger"
+                  id="deleteData-button"
+                >
                   Delete Data
                 </button>
+                <span class="fst-italic"
+                  >This will delete all, including Expenses and Profile, but don't
+                  worry, you can Export Stats as an Image on the "Stats" page and
+                  create your Profile again.</span
+                >
               </div>
             </form>
           </div>
