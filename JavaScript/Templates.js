@@ -203,7 +203,7 @@ class About extends HTMLElement {
         <p class="mb-4">dsvillalobos</p>
         <!-- Version -->
         <h2 class="fs-4 mb-2">Version</h2>
-        <p class="mb-4">DS Spendify Version 0.2.9</p>
+        <p class="mb-4">DS Spendify Version 0.3.0</p>
         <!-- Follow Me -->
         <h2 class="fs-4 mb-2">Follow Me</h2>
         <p class="mb-4">
@@ -310,13 +310,12 @@ class profileFormClass extends HTMLElement {
                   class="btn btn-danger"
                   id="deleteData-button"
                 >
-                  Delete Data
+                  Delete All Expenses
                 </button>
-                <span class="fst-italic"
-                  >This will delete all, including Expenses and Profile, but don't
-                  worry, you can Export Stats as an Image on the "Stats" page and
-                  create your Profile again.</span
-                >
+                <span class="fst-italic">
+                  This will delete all your expenses; you might want to export
+                  them as an image on the "Stats" page.
+                </span>
               </div>
             </form>
           </div>
