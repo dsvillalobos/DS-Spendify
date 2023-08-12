@@ -1,6 +1,6 @@
 //JavaScript
 
-//DS Spendify Version 0.3.1
+//DS Spendify Version 0.3.2
 
 self.addEventListener("install", (e) => {
   e.waitUntil(

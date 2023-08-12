@@ -57,7 +57,7 @@ function updateExpenseList(expenses) {
       "justify-content-between",
       "align-items-center"
     );
-    expenseItem.innerHTML = `<span>${expense.expenseName}</span><span>${expense.date}</span><span>$${expense.amount}</span>`;
+    expenseItem.innerHTML = `<span class="col-4">${expense.expenseName}</span><span class="col-3">${expense.date}</span><span class="col-1">$${expense.amount}</span>`;
 
     const deleteButton = document.createElement("button");
 

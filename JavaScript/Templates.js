@@ -178,7 +178,7 @@ class Form extends HTMLElement {
             </div>
             <div class="form-group mb-3">
               <label for="amount" class="mb-1">Amount ($):</label>
-              <input type="number" id="amount" class="form-control" required min="1" />
+              <input type="number" id="amount" class="form-control" required min="1" max="999" />
             </div>
             <!-- Add Expense Button -->
             <div class="d-grid gap-2 mb-4">
@@ -203,7 +203,7 @@ class About extends HTMLElement {
         <p class="mb-4">@dsvillalobos</p>
         <!-- Version -->
         <h2 class="fs-4 mb-2">Version</h2>
-        <p class="mb-4">DS Spendify Version 0.3.1</p>
+        <p class="mb-4">DS Spendify Version 0.3.2</p>
         <!-- Follow Me -->
         <h2 class="fs-4 mb-2">Follow Me</h2>
         <p class="mb-4">
