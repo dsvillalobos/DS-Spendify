@@ -203,7 +203,7 @@ class About extends HTMLElement {
         <p class="mb-4">@dsvillalobos</p>
         <!-- Version -->
         <h2 class="fs-4 mb-2">Version</h2>
-        <p class="mb-4">DS Spendify Version 0.3.2</p>
+        <p class="mb-4">DS Spendify Version 0.3.3</p>
         <!-- Follow Me -->
         <h2 class="fs-4 mb-2">Follow Me</h2>
         <p class="mb-4">
@@ -455,58 +455,61 @@ customElements.define("import-charts", Charts);
 class dataAnalysis extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-        <div class="mb-4">
-          <!-- Financial Personality -->
-          <h3 class="fs-5 mb-2">Financial Personality</h3>
-          <p class="fst-italic mb-2">
-            Financial Personality is the way you handle money. DS Spendify has
-            checked your Income, Expenses, and your Saving Target and has
-            reached the conclusion that your Financial Personality is
-            <span id="financialPersonalitySpan" class="fw-bold"></span>.
-          </p>
-          <div class="card mb-3">
-            <div class="card-body">
-              <details>
-                <summary id="financialPersonalityTitle" class="fw-bold"></summary>
-                <p id="financialPersonalityText" class="fst-italic my-0"></p>
-              </details>
-            </div>
-          </div>
-          <!-- Saving Tips -->
-          <h3 class="fs-5 mb-2">Saving Tips</h3>
-          <p class="fst-italic mb-2">
-            You've spent
-            <span id="totalSpentSpan" class="fw-bold"></span> on
-            <span id="mostSpentCategorySpan" class="fw-bold"></span>. DS Spendify
-            has tailored these personalized Saving Tips exclusively for you. We
-            hope these Tips will help you achieve your financial goals and make
-            the most of your hard-earned money.
-          </p>
-          <div class="card mb-2">
-            <div class="card-body">
-              <details>
-                <summary id="savingTip1Title" class="fw-bold"></summary>
-                <p id="savingTip1Text" class="fst-italic my-0"></p>
-              </details>
-            </div>
-          </div>
-          <div class="card mb-2">
-            <div class="card-body">
-              <details>
-                <summary id="savingTip2Title" class="fw-bold"></summary>
-                <p id="savingTip2Text" class="fst-italic my-0"></p>
-              </details>
-            </div>
-          </div>
-          <div class="card mb-2">
-            <div class="card-body">
-              <details>
-                <summary id="savingTip3Title" class="fw-bold"></summary>
-                <p id="savingTip3Text" class="fst-italic my-0"></p>
-              </details>
-            </div>
-          </div>
-        </div>
+        <p class="fst-italic mb-3">
+          DS Spendify has done a thorough analysis of your data and is all set to
+          give you a detailed breakdown:
+        </p>
+        <!-- Data Analysis Table -->
+        <table class="table mb-4">
+          <thead>
+            <tr>
+              <td class="table-dark">Metrics</td>
+              <td class="table-dark">Results</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Income</td>
+              <td class="fst-italic" id="incomeCell"></td>
+            </tr>
+            <tr>
+              <td>Expenses</td>
+              <td class="fst-italic" id="expensesCell"></td>
+            </tr>
+            <tr>
+              <td>Balance</td>
+              <td class="fst-italic" id="balanceCell"></td>
+            </tr>
+            <tr>
+              <td>Saving Target</td>
+              <td class="fst-italic" id="savingTargetCell"></td>
+            </tr>
+            <tr>
+              <td>Financial Personality</td>
+              <td class="fst-italic" id="financialPersonalityCell"></td>
+            </tr>
+            <tr>
+              <td>Most Spent Category</td>
+              <td class="fst-italic" id="mostSpentCategoryCell"></td>
+            </tr>
+            <tr>
+              <td>Least Spent Category</td>
+              <td class="fst-italic" id="leastSpentCategoryCell"></td>
+            </tr>
+            <tr>
+              <td>Average Expenses per Category</td>
+              <td class="fst-italic" id="averageExpensesPerCategoryCell"></td>
+            </tr>
+            <tr>
+              <td>AI Generated Saving Tips</td>
+              <td class="fst-italic">
+                <li id="savingTip1"></li>
+                <li id="savingTip2"></li>
+                <li id="savingTip3"></li>
+              </td>
+            </tr>
+          </tbody>
+        </table>
     `;
   }
 }
