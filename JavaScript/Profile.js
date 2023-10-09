@@ -3,20 +3,35 @@
 const username = document.getElementById("username");
 const income = document.getElementById("income");
 const savingTarget = document.getElementById("savingTarget");
-const profileForm = document.getElementById("profileForm");
-const deleteDataButton = document.getElementById("deleteData-button");
+const alert = document.getElementById("alert");
+const alertSpan = document.getElementById("alertSpan");
 
-profileForm.addEventListener("submit", saveProfile);
-deleteDataButton.addEventListener("click", deleteData);
-
-function saveProfile() {
+function saveUsername() {
   username.value = username.value.trim();
   localStorage.setItem("username", " " + username.value);
-  localStorage.setItem("income", income.value);
-  localStorage.setItem("savingTarget", savingTarget.value);
+  event.preventDefault();
+  username.value = "";
+  alertSpan.innerHTML = "Username";
+  alert.style.display = "block";
 }
 
-function deleteData() {
+function saveIncome() {
+  localStorage.setItem("income", income.value);
+  event.preventDefault();
+  income.value = "";
+  alertSpan.innerHTML = "Income";
+  alert.style.display = "block";
+}
+
+function saveSavingTarget() {
+  localStorage.setItem("savingTarget", savingTarget.value);
+  event.preventDefault();
+  savingTarget.value = "";
+  alertSpan.innerHTML = "Saving Target";
+  alert.style.display = "block";
+}
+
+function deleteAllExpenses() {
   //Basic Expenses
   localStorage.removeItem("basicExpenses");
   localStorage.removeItem("basicExpensesTOT");

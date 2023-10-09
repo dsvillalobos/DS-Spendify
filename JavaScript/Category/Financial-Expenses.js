@@ -1,5 +1,11 @@
 //JavaScript
 
+//Custom Placeholders
+const placeholderExpenseName = document.getElementById("expenseName");
+placeholderExpenseName.setAttribute("placeholder", "E.g. Credit Card Payment");
+const amountPlaceholder = document.getElementById("amount");
+amountPlaceholder.setAttribute("placeholder", "E.g. 300");
+
 //Expense Form and Expense List
 const expenseForm = document.getElementById("expenseForm");
 const expenseList = document.getElementById("expenseList");

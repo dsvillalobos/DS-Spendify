@@ -203,7 +203,7 @@ class About extends HTMLElement {
         <p class="mb-4">@dsvillalobos</p>
         <!-- Version -->
         <h2 class="fs-4 mb-2">Version</h2>
-        <p class="mb-4">DS Spendify Version 0.3.3</p>
+        <p class="mb-4">DS Spendify Version 0.3.4</p>
         <!-- Follow Me -->
         <h2 class="fs-4 mb-2">Follow Me</h2>
         <p class="mb-4">
@@ -285,55 +285,84 @@ class profileFormClass extends HTMLElement {
     this.innerHTML = `
         <div class="row mb-4">
           <div class="col-md-8 mx-auto">
-            <form id="profileForm" autocomplete="off">
-              <!-- Username -->
+            <!-- Username -->
+            <form autocomplete="off">
               <div class="form-group mb-3">
-                <label for="username" class="mb-1">Username:</label>
-                <input type="text" id="username" class="form-control" required />
-              </div>
-              <!-- Income -->
-              <div class="form-group mb-3">
-                <label for="income" class="mb-1">Income ($):</label>
-                <input
-                  type="number"
-                  id="income"
-                  class="form-control"
-                  required
-                  min="1"
-                />
-              </div>
-              <!-- Saving Target -->
-              <div class="form-group mb-3">
-                <label for="savingTarget" class="mb-1">Saving Target ($):</label>
-                <input
-                  type="number"
-                  id="savingTarget"
-                  class="form-control"
-                  required
-                  min="0"
-                />
-              </div>
-              <!-- Save Button -->
-              <div class="d-grid gap-2 mb-2">
-                <button type="submit" class="btn btn-primary" id="save-button">
-                  Save Profile
-                </button>
-              </div>
-              <!-- Delete Data Button -->
-              <div class="d-grid gap-2 mb-4">
-                <button
-                  type="reset"
-                  class="btn btn-danger"
-                  id="deleteData-button"
-                >
-                  Delete All Expenses
-                </button>
-                <span class="fst-italic">
-                  This will delete all your expenses; you might want to export
-                  them as an image on the "Stats" page.
-                </span>
+                <label class="mb-1" for="username">Username:</label>
+                <div class="input-group">
+                  <input
+                    class="form-control"
+                    type="text"
+                    id="username"
+                    required
+                    placeholder="E.g. Lucas Anderson"
+                  />
+                  <!-- Save Button for Username -->
+                  <button class="btn btn-primary" onclick="saveUsername()">
+                    Save
+                  </button>
+                </div>
               </div>
             </form>
+            <!-- Income -->
+            <form autocomplete="off">
+              <div class="form-group mb-3">
+                <label class="mb-1" for="income">Income ($):</label>
+                <div class="input-group">
+                  <input
+                    class="form-control"
+                    type="number"
+                    id="income"
+                    required
+                    min="1"
+                    placeholder="E.g. 1200"
+                  />
+                  <!-- Save Button for Income -->
+                  <button class="btn btn-primary" onclick="saveIncome()">
+                    Save
+                  </button>
+                </div>
+              </div>
+            </form>
+            <!-- Saving Target -->
+            <form autocomplete="off">
+              <div class="form-group mb-3">
+                <label class="mb-1" for="savingTarget">Saving Target ($):</label>
+                <div class="input-group">
+                  <input
+                    class="form-control"
+                    type="number"
+                    id="savingTarget"
+                    required
+                    min="0"
+                    placeholder="E.g. 200"
+                  />
+                  <!-- Save Button for Saving Target-->
+                  <button class="btn btn-primary" onclick="saveSavingTarget()">
+                    Save
+                  </button>
+                </div>
+              </div>
+            </form>
+            <hr />
+            <!-- Delete All Expenses -->
+            <div class="d-grid gap-2 mb-3">
+              <button
+                class="btn btn-danger"
+                id="deleteAllExpenses"
+                onclick="deleteAllExpenses()"
+              >
+                Delete All Expenses
+              </button>
+              <span class="fst-italic">
+                This will delete all your expenses; you might want to export them
+                as an image on the "Stats" page.
+              </span>
+            </div>
+            <!-- Alert -->
+            <div class="alert alert-success" id="alert" style="display: none">
+              Success - DS Spendify has Saved your <span id="alertSpan"></span> Correctly!
+            </div>
           </div>
         </div>
     `;
