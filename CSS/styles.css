@@ -1,0 +1,100 @@
+/*CSS*/
+
+body {
+  margin: 0% !important;
+}
+
+/*---Bootstrap---*/
+.navbar button,
+.form-control,
+.form-control:active,
+.btn-close {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+header .navbar {
+  background-color: #5c9f79 !important;
+  border: #5c9f79 !important;
+}
+
+header .navbar a,
+header .navbar a:active,
+header .navbar a:hover {
+  color: white !important;
+}
+
+.btn-danger,
+.btn-danger:active,
+.btn-danger:hover {
+  background-color: #bc4749 !important;
+  border: #bc4749 !important;
+}
+
+.btn-success,
+.btn-success:active,
+.btn-success:hover {
+  background-color: #4c956c !important;
+  border: #4c956c !important;
+}
+
+.carousel-indicators button,
+.btn-primary,
+.btn-primary:active,
+.btn-primary:hover {
+  background-color: #1e3d59 !important;
+  border: #1e3d59 !important;
+}
+
+/*---DS Spendify's CSS---*/
+.account-card {
+  width: 315px !important;
+  height: 200px !important;
+  position: relative !important;
+  overflow: hidden !important;
+  margin: 0% auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  padding: 20px !important;
+  border-radius: 15px !important;
+  margin-bottom: 35px !important;
+  background-color: #1e3d59 !important;
+}
+
+.account-card-info {
+  display: flex !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+}
+
+.illustration {
+  width: 225px !important;
+  height: 225px !important;
+}
+
+/*Animations*/
+.fade-in {
+  -webkit-animation: fade-in 0.75s ease-in both;
+  animation: fade-in 0.75s ease-in both;
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
