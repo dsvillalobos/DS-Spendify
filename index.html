@@ -27,8 +27,8 @@
       src="https://kit.fontawesome.com/0036ece5c1.js"
       crossorigin="anonymous"
     ></script>
-    <!-- Templates -->
-    <script src="/JavaScript/Templates/Templates.js"></script>
+    <!-- Components -->
+    <script src="/JavaScript/Components/Web-Components.js"></script>
     <!-- Character Encoding -->
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
     <!-- Viewport -->
@@ -39,17 +39,17 @@
   <body class="mb-4">
     <!-- Header -->
     <import-header></import-header>
+    <!-- Accounts -->
+    <import-accounts></import-accounts>
     <!-- Content Container -->
-    <div class="content-container fade-in">
-      <!-- Accounts -->
-      <import-accounts></import-accounts>
+    <div class="content-container fade-in col-md-8 mx-auto">
       <!-- Main Container -->
       <main class="container">
         <!-- Total Overview -->
         <h2 class="fs-4 text-center mb-3">Total Overview</h2>
-        <import-overview></import-overview>
-        <!-- Add Income/Add Expense Buttons -->
-        <import-add-income-expense-buttons></import-add-income-expense-buttons>
+        <import-total-overview></import-total-overview>
+        <!-- Transaction Buttons -->
+        <import-transaction-buttons></import-transaction-buttons>
       </main>
     </div>
     <!-- JavaScript -->
