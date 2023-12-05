@@ -39,24 +39,27 @@
   <body class="mb-4">
     <!-- Header -->
     <import-header></import-header>
-    <!-- Welcome Text -->
-    <import-welcome-text></import-welcome-text>
-    <!-- Accounts -->
-    <import-accounts></import-accounts>
     <!-- Content Container -->
     <div class="content-container fade-in col-md-8 mx-auto">
       <!-- Main Container -->
       <main class="container">
-        <!-- Total Overview -->
-        <import-total-overview></import-total-overview>
-        <!-- Transaction Buttons -->
-        <import-transaction-buttons></import-transaction-buttons>
-        <!-- Accordion Menu -->
-        <import-accordion-menu></import-accordion-menu>
+        <!-- Add Expense -->
+        <div class="text-center mb-4">
+          <!-- Icon -->
+          <i class="fa-solid fa-arrow-down view-icon mb-3"></i>
+          <!-- Title -->
+          <h2 class="fs-4 mb-1">Add Expense</h2>
+          <!-- Description -->
+          <p class="fst-italic fs-6 mb-0">
+            Track spending for financial balance.
+          </p>
+        </div>
+        <!-- Add Expense Form -->
+        <import-add-expense-form></import-add-expense-form>
       </main>
     </div>
     <!-- JavaScript -->
-    <!-- Index JS -->
-    <script src="/JavaScript/Index.js"></script>
+    <!-- Add Expense - JS -->
+    <script src="/JavaScript/Transactions/Add-Expense.js"></script>
   </body>
 </html>

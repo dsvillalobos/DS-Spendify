@@ -27,8 +27,8 @@ header .navbar a:hover {
 .btn-danger,
 .btn-danger:active,
 .btn-danger:hover {
-  background-color: #bc4749 !important;
-  border: #bc4749 !important;
+  background-color: #bd4b4d !important;
+  border: #bd4b4d !important;
 }
 
 .btn-success,
@@ -44,6 +44,14 @@ header .navbar a:hover {
 .btn-primary:hover {
   background-color: #1e3d59 !important;
   border: #1e3d59 !important;
+}
+
+.accordion-button,
+.accordion-button:active,
+.accordion-button:hover {
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: white !important;
 }
 
 /*---DS Spendify's CSS---*/
@@ -68,9 +76,9 @@ header .navbar a:hover {
   width: 100% !important;
 }
 
-.illustration {
-  width: 230px !important;
-  height: 230px !important;
+.view-icon {
+  font-size: 75px !important;
+  color: #1e3d59 !important;
 }
 
 /*Animations*/

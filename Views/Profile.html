@@ -36,7 +36,7 @@
     <!-- Theme Color -->
     <meta name="theme-color" content="#5C9F79" />
   </head>
-  <body>
+  <body class="mb-4">
     <!-- Header -->
     <import-header></import-header>
     <!-- Content Container -->
@@ -45,12 +45,8 @@
       <main class="container">
         <!-- Profile -->
         <div class="text-center mb-4">
-          <!-- Image -->
-          <img
-            class="illustration mb-2"
-            src="/Images/Illustrations/Profile.webp"
-            alt="Profile"
-          />
+          <!-- Icon -->
+          <i class="fa-solid fa-user view-icon mb-3"></i>
           <!-- Title -->
           <h2 class="fs-4 mb-1">Profile</h2>
           <!-- Description -->
@@ -58,7 +54,12 @@
             Personalize your financial journey here.
           </p>
         </div>
+        <!-- Profile Form -->
+        <import-profile-form></import-profile-form>
       </main>
     </div>
+    <!-- JavaScript -->
+    <!-- Profile JS -->
+    <script src="/JavaScript/Profile.js"></script>
   </body>
 </html>

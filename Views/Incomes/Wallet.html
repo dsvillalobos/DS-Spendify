@@ -39,24 +39,27 @@
   <body class="mb-4">
     <!-- Header -->
     <import-header></import-header>
-    <!-- Welcome Text -->
-    <import-welcome-text></import-welcome-text>
-    <!-- Accounts -->
-    <import-accounts></import-accounts>
     <!-- Content Container -->
     <div class="content-container fade-in col-md-8 mx-auto">
       <!-- Main Container -->
       <main class="container">
-        <!-- Total Overview -->
-        <import-total-overview></import-total-overview>
-        <!-- Transaction Buttons -->
-        <import-transaction-buttons></import-transaction-buttons>
-        <!-- Accordion Menu -->
-        <import-accordion-menu></import-accordion-menu>
+        <!-- Wallet -->
+        <div class="text-center mb-4">
+          <!-- Icon -->
+          <i class="fa-solid fa-money-bill-wave view-icon mb-3"></i>
+          <!-- Title -->
+          <h2 class="fs-4 mb-1">Wallet</h2>
+          <!-- Description -->
+          <p class="fst-italic fs-6 mb-0">
+            Manage and track your Wallet transactions.
+          </p>
+        </div>
+        <!-- Incomes -->
+        <div id="walletIncomesContainer"></div>
       </main>
     </div>
     <!-- JavaScript -->
-    <!-- Index JS -->
-    <script src="/JavaScript/Index.js"></script>
+    <!-- Wallet JS -->
+    <script src="/JavaScript/Incomes/Wallet.js"></script>
   </body>
 </html>
