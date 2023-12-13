@@ -72,4 +72,11 @@ function addExpense() {
   `;
 
   addExpenseForm.appendChild(alertElement);
+  setDate();
 }
+
+function setDate() {
+  document.getElementById("expenseDate").valueAsDate = new Date();
+}
+
+setDate();

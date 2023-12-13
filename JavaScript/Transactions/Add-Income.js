@@ -61,4 +61,11 @@ function addIncome() {
   `;
 
   addIncomeForm.appendChild(alertElement);
+  setDate();
 }
+
+function setDate() {
+  document.getElementById("incomeDate").valueAsDate = new Date();
+}
+
+setDate();

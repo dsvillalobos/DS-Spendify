@@ -425,7 +425,7 @@ class AboutClass extends HTMLElement {
         </tr>
         <tr>
           <td><h6 class="fs-6">Version</h6></td>
-          <td>DS Spendify Version 1.0.3</td>
+          <td>DS Spendify Version 1.0.4</td>
         </tr>
         <tr>
           <td><h6 class="fs-6">Need Help?</h6></td>
@@ -686,7 +686,7 @@ class AccordionMenuClass extends HTMLElement {
               <li class="list-group-item pb-3 pt-0">
                 <a
                   class="text-decoration-none text-dark"
-                  href="/Views/Transfer-Money.html"
+                  href="/Views/Transactions/Transfer-Money.html"
                   ><i class="fa-solid fa-money-bill-transfer"></i> Transfer
                   Money</a
                 >
