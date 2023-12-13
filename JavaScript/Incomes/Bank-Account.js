@@ -1,6 +1,6 @@
 //JavaScript
 
-const incomesContainer = document.getElementById("bankAccountIncomesContainer");
+const incomesContainer = document.getElementById("accordionExample");
 
 let incomes;
 
@@ -15,22 +15,28 @@ function getBankAccountIncomes() {
     for (let i = 0; i < incomes.length; i++) {
       if (incomes[i].incomeAccount == "Bank Account") {
         let incomeCard = document.createElement("div");
-        incomeCard.classList.add("mb-3");
+        incomeCard.classList.add("accordion-item");
 
         incomeCard.innerHTML = `
-        <div class="card">
-          <div class="card-header">
-            <div class="row">
-              <div class="col-9 h6 my-1">${incomes[i].incomeName}</div>
-              <div class="col-3 d-flex justify-content-end">
-                <button class="btn btn-danger btn-sm" onclick="deleteBankAccountIncome(${i})">
-                  <i class="fa-solid fa-trash-can"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="card-body">
-            <div class="row text-center">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#accordion${i}"
+            aria-expanded="true"
+            aria-controls="accordion${i}"
+          >
+            <h6 class="text-dark my-1">${incomes[i].incomeName}</h6>
+          </button>
+        </h2>
+        <div
+          id="accordion${i}"
+          class="accordion-collapse collapse"
+          data-bs-parent="#accordionExample"
+        >
+          <div class="accordion-body py-0">
+            <div class="row text-center mb-3">
               <div class="col-4">
                 <h6>Date:</h6>
                 <span class="small">${incomes[i].incomeDate}</span>
@@ -43,6 +49,11 @@ function getBankAccountIncomes() {
                 <h6>Amount ($):</h6>
                 <span class="small">$${incomes[i].incomeAmount}</span>
               </div>
+            </div>
+            <div class="d-grid gap-2 mb-3">
+              <button class="btn btn-danger btn-sm" onclick="deleteBankAccountIncome(${i})">
+                <i class="fa-solid fa-trash-can"></i> Delete
+              </button>
             </div>
           </div>
         </div>

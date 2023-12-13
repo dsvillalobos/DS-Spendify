@@ -425,7 +425,7 @@ class AboutClass extends HTMLElement {
         </tr>
         <tr>
           <td><h6 class="fs-6">Version</h6></td>
-          <td>DS Spendify Version 1.0.4</td>
+          <td>DS Spendify Version 1.0.5</td>
         </tr>
         <tr>
           <td><h6 class="fs-6">Need Help?</h6></td>
@@ -539,7 +539,7 @@ class AccordionMenuClass extends HTMLElement {
             aria-expanded="true"
             aria-controls="collapseOne"
           >
-            <h6 class="text-dark">Incomes</h6>
+            <h6 class="text-dark my-1">Incomes</h6>
           </button>
         </h2>
         <div
@@ -578,7 +578,7 @@ class AccordionMenuClass extends HTMLElement {
             aria-expanded="false"
             aria-controls="collapseTwo"
           >
-            <h6 class="text-dark">Expenses</h6>
+            <h6 class="text-dark my-1">Expenses</h6>
           </button>
         </h2>
         <div
@@ -673,7 +673,7 @@ class AccordionMenuClass extends HTMLElement {
             aria-expanded="false"
             aria-controls="collapseThree"
           >
-            <h6 class="text-dark">Transfer Money</h6>
+            <h6 class="text-dark my-1">Transfer Money</h6>
           </button>
         </h2>
         <div

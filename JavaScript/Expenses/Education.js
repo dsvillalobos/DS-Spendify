@@ -1,6 +1,6 @@
 //JavaScript
 
-const expensesContainer = document.getElementById("educationExpensesContainer");
+const expensesContainer = document.getElementById("accordionExample");
 
 let expenses;
 
@@ -15,21 +15,27 @@ function getEducationExpenses() {
     for (let i = 0; i < expenses.length; i++) {
       if (expenses[i].expenseCategory == "Education") {
         let expenseCard = document.createElement("div");
-        expenseCard.classList.add("mb-3");
+        expenseCard.classList.add("accordion-item");
 
         expenseCard.innerHTML = `
-        <div class="card">
-          <div class="card-header">
-            <div class="row">
-              <div class="col-9 h6 my-1">${expenses[i].expenseName}</div>
-              <div class="col-3 d-flex justify-content-end">
-                <button class="btn btn-danger btn-sm" onclick="deleteEducationExpense(${i})">
-                  <i class="fa-solid fa-trash-can"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="card-body">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#accordion${i}"
+            aria-expanded="true"
+            aria-controls="accordion${i}"
+          >
+            <h6 class="text-dark my-1">${expenses[i].expenseName}</h6>
+          </button>
+        </h2>
+        <div
+          id="accordion${i}"
+          class="accordion-collapse collapse"
+          data-bs-parent="#accordionExample"
+        >
+          <div class="accordion-body py-0">
             <div class="row text-center mb-3">
               <div class="col-6">
                 <h6>Date:</h6>
@@ -40,7 +46,7 @@ function getEducationExpenses() {
                 <span class="small">${expenses[i].expenseCategory}</span>
               </div>
             </div>
-            <div class="row text-center">
+            <div class="row text-center mb-3">
               <div class="col-6">
                 <h6>Account:</h6>
                 <span class="small">${expenses[i].expenseAccount}</span>
@@ -49,6 +55,11 @@ function getEducationExpenses() {
                 <h6>Amount ($):</h6>
                 <span class="small">$${expenses[i].expenseAmount}</span>
               </div>
+            </div>
+            <div class="d-grid gap-2 mb-3">
+              <button class="btn btn-danger btn-sm" onclick="deleteEducationExpense(${i})">
+                <i class="fa-solid fa-trash-can"></i> Delete
+              </button>
             </div>
           </div>
         </div>
