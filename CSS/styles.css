@@ -54,26 +54,21 @@ header .navbar a:hover {
   background-color: white !important;
 }
 
+.text-primary {
+  color: #1e5282 !important;
+}
+
+.text-warning {
+  color: #b88f2b !important;
+}
+
 /*---DS Spendify's CSS---*/
 .account-card {
   width: 315px !important;
   height: 200px !important;
-  position: relative !important;
-  overflow: hidden !important;
-  margin: 0% auto !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: flex-start !important;
-  padding: 20px !important;
   border-radius: 15px !important;
   margin-bottom: 35px !important;
   background-color: #1e3d59 !important;
-}
-
-.account-card-info {
-  display: flex !important;
-  justify-content: space-between !important;
-  width: 100% !important;
 }
 
 .view-icon {

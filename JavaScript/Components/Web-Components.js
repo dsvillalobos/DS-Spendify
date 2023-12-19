@@ -113,36 +113,60 @@ class AccountsClass extends HTMLElement {
       <div class="carousel-inner">
         <div class="carousel-item active">
           <!-- Wallet -->
-          <div class="account-card shadow">
-            <h1 class="fs-3 text-light mb-4">Wallet</h1>
-            <h4 class="fs-5 text-light">Balance</h4>
-            <h3 class="fs-4 text-light mb-3">
-              $<span id="balanceWalletAccount"></span>
-            </h3>
-            <div class="account-card-info">
-              <h4 class="fs-6 text-light mt-2">
-                <span id="usernameWalletAccount"></span>
-              </h4>
-              <div class="account-card-icon">
-                <i class="fa-solid fa-money-bill-wave text-light fs-3"></i>
+          <div class="card mx-auto account-card text-light p-2">
+            <div class="card-body">
+              <h3 class="mb-4">Wallet</h3>
+              <div class="row text-center mb-4">
+                <div class="col">
+                  <h6>Balance</h6>
+                  <span id="balanceWalletAccount"></span>
+                </div>
+                <div class="col">
+                  <h6>Income</h6>
+                  <span id="incomeWalletAccount"></span>
+                </div>
+                <div class="col">
+                  <h6>Expenses</h6>
+                  <span id="expensesWalletAccount"></span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <h6 id="usernameWalletAccount"></h6>
+                </div>
+                <div class="col text-end me-2">
+                  <i class="fa-solid fa-money-bill-wave h3"></i>
+                </div>
               </div>
             </div>
           </div>
         </div>
         <div class="carousel-item">
           <!-- Bank Account -->
-          <div class="account-card shadow">
-            <h1 class="fs-3 text-light mb-4">Bank Account</h1>
-            <h4 class="fs-5 text-light">Balance</h4>
-            <h3 class="fs-4 text-light mb-3">
-              $<span id="balanceBankAccount"></span>
-            </h3>
-            <div class="account-card-info">
-              <h4 class="fs-6 text-light mt-2">
-                <span id="usernameBankAccount"></span>
-              </h4>
-              <div class="account-card-icon">
-                <i class="fa-solid fa-building-columns text-light fs-3"></i>
+          <div class="card mx-auto account-card text-light p-2">
+            <div class="card-body">
+              <h3 class="mb-4">Bank Account</h3>
+              <div class="row text-center mb-4">
+                <div class="col">
+                  <h6>Balance</h6>
+                  <span id="balanceBankAccount"></span>
+                </div>
+                <div class="col">
+                  <h6>Income</h6>
+                  <span id="incomeBankAccount"></span>
+                </div>
+                <div class="col">
+                  <h6>Expenses</h6>
+                  <span id="expensesBankAccount"></span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <h6 id="usernameBankAccount"></h6>
+                </div>
+                <div class="col text-end me-2">
+                  <i class="fa-solid fa-building-columns h3"></i>
+                </div>
               </div>
             </div>
           </div>
@@ -163,20 +187,25 @@ class TotalOverviewClass extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
     <div class="overview mb-4 mt-2">
-      <div class="row text-center">
+      <div class="row text-center mb-3">
         <div class="col">
-          <h3 class="fs-5 mb-1">Balance</h3>
-          <span class="text-success fs-6" id="totalOverviewBalance">$460</span>
+          <h6 class="mb-1">Total Balance</h6>
+          <span class="text-success" id="totalOverviewBalance"></span>
+          <br />
+          <span
+            class="fst-italic small"
+            id="totalOverviewBalanceText"
+          ></span>
         </div>
       </div>
       <div class="row text-center">
         <div class="col">
-          <h3 class="fs-5 mb-1">Income</h3>
-          <span class="fs-6" id="totalOverviewIncome"></span>
+          <h6 class="mb-1">Total Income</h6>
+          <span class="text-primary" id="totalOverviewIncome"></span>
         </div>
         <div class="col">
-          <h3 class="fs-5 mb-1">Expenses</h3>
-          <span class="text-danger fs-6" id="totalOverviewExpenses">$0</span>
+          <h6 class="mb-1">Total Expenses</h6>
+          <span class="text-danger" id="totalOverviewExpenses"></span>
         </div>
       </div>
     </div>
@@ -425,7 +454,7 @@ class AboutClass extends HTMLElement {
         </tr>
         <tr>
           <td><h6 class="fs-6">Version</h6></td>
-          <td>DS Spendify Version 1.0.5</td>
+          <td>DS Spendify Version 1.0.6</td>
         </tr>
         <tr>
           <td><h6 class="fs-6">Need Help?</h6></td>
