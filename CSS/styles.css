@@ -41,7 +41,8 @@ header .navbar a:hover {
 .carousel-indicators button,
 .btn-primary,
 .btn-primary:active,
-.btn-primary:hover {
+.btn-primary:hover,
+.table-primary {
   background-color: #1e3d59 !important;
   border: #1e3d59 !important;
 }
@@ -60,6 +61,12 @@ header .navbar a:hover {
 
 .text-warning {
   color: #b88f2b !important;
+}
+
+.accordion-menu i,
+.table td i,
+form i {
+  color: #1e3d59 !important;
 }
 
 /*---DS Spendify's CSS---*/

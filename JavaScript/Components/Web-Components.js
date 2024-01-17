@@ -446,58 +446,80 @@ class AboutClass extends HTMLElement {
 
   connectedCallback() {
     this.innerHTML = `
-    <table class="table text-center">
-      <tbody>
-        <tr>
-          <td><h6 class="fs-6">Created by</h6></td>
-          <td>@dsvillalobos</td>
-        </tr>
-        <tr>
-          <td><h6 class="fs-6">Version</h6></td>
-          <td>DS Spendify Version 1.0.6</td>
-        </tr>
-        <tr>
-          <td><h6 class="fs-6">Need Help?</h6></td>
-          <td>
+    <ul class="list-group">
+      <li
+        class="list-group-item d-flex justify-content-between align-items-start"
+      >
+        <div class="ms-2 me-auto">
+          <div class="fw-bold">Created by</div>
+          @dsvillalobos
+        </div>
+      </li>
+      <li
+        class="list-group-item d-flex justify-content-between align-items-start"
+      >
+        <div class="ms-2 me-auto">
+          <div class="fw-bold">Version</div>
+          DS Spendify Version 1.0.7
+        </div>
+      </li>
+      <li
+        class="list-group-item d-flex justify-content-between align-items-start"
+      >
+        <div class="ms-2 me-auto">
+          <div class="fw-bold">Help & Privacy</div>
+          <ul>
+            <li class="mb-1">
+              <a class="text-dark" href="" target="_blank">Help Center</a>
+            </li>
+            <li>
+              <a class="text-dark" href="" target="_blank">Data Security</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li
+        class="list-group-item d-flex justify-content-between align-items-start"
+      >
+        <div class="ms-2 me-auto">
+          <div class="fw-bold">Follow Me</div>
+          <div class="mt-1">
             <a
-              class="text-dark"
-              href="https://ds-spendify-home.netlify.app/help-center"
-            >
-              Go to the Help Center.
-            </a>
-          </td>
-        </tr>
-        <tr>
-          <td><h6 class="fs-6">Follow Me</h6></td>
-          <td>
-            <a
-              class="fs-5 text-dark mx-2"
-              href="https://twitter.com/dsvillalobosss"
-              ><i class="fa-brands fa-x-twitter"></i
-            ></a>
-            <a
-              class="fs-5 text-dark mx-2"
+              class="text-dark mx-2"
               href="https://www.instagram.com/dsvillalobosss/"
-              ><i class="fa-brands fa-instagram"></i
+              target="_blank"
+              ><i class="fa-brands fa-instagram fs-4"></i
             ></a>
             <a
-              class="fs-5 text-dark mx-2"
+              class="text-dark mx-2"
+              href="https://twitter.com/dsvillalobosss"
+              target="_blank"
+              ><i class="fa-brands fa-x-twitter fs-4"></i
+            ></a>
+            <a
+              class="text-dark mx-2"
               href="https://www.threads.net/@dsvillalobosss"
-              ><i class="fa-brands fa-threads"></i
+              target="_blank"
+              ><i class="fa-brands fa-threads fs-4"></i
             ></a>
             <a
-              class="fs-5 text-dark mx-2"
+              class="text-dark mx-2"
               href="https://github.com/dsvillalobos"
-              ><i class="fa-brands fa-github"></i
+              target="_blank"
+              ><i class="fa-brands fa-github fs-4"></i
             ></a>
-          </td>
-        </tr>
-        <tr>
-          <td><h6 class="fs-6">Copyright</h6></td>
-          <td>© dsvillalobos 2023</td>
-        </tr>
-      </tbody>
-    </table>
+          </div>
+        </div>
+      </li>
+      <li
+        class="list-group-item d-flex justify-content-between align-items-start"
+      >
+        <div class="ms-2 me-auto">
+          <div class="fw-bold">Copyright</div>
+          © 2024 dsvillalobos. All rights reserved.
+        </div>
+      </li>
+    </ul>
     `;
   }
 }
@@ -557,7 +579,7 @@ class AccordionMenuClass extends HTMLElement {
 
   connectedCallback() {
     this.innerHTML = `
-    <div class="accordion" id="accordionExample">
+    <div class="accordion accordion-menu" id="accordionExample">
       <div class="accordion-item">
         <h2 class="accordion-header">
           <button
@@ -730,3 +752,138 @@ class AccordionMenuClass extends HTMLElement {
 }
 
 window.customElements.define("import-accordion-menu", AccordionMenuClass);
+
+class StatsTableClass extends HTMLElement {
+  constructor() {
+    super();
+  }
+
+  connectedCallback() {
+    this.innerHTML = `
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="col-7 py-2 table-primary text-light">Category</th>
+          <th class="col-5 py-2 table-primary text-light">Expenses ($)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="col-7 py-2">
+            <i class="fa-solid fa-house-chimney"></i> Home
+          </td>
+          <td class="col-5 py-2"><span id="homeTotal"></span></td>
+        </tr>
+        <tr>
+          <td class="col-7 py-2">
+            <i class="fa-solid fa-basket-shopping"></i> Groceries
+          </td>
+          <td class="col-5 py-2"><span id="groceriesTotal"></span></td>
+        </tr>
+        <tr>
+          <td class="col-7 py-2">
+            <i class="fa-solid fa-car"></i> Transportation
+          </td>
+          <td class="col-5 py-2">
+            <span id="transportationTotal"></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="col-7 py-2">
+            <i class="fa-solid fa-heart-pulse"></i> Health and Fitness
+          </td>
+          <td class="col-5 py-2">
+            <span id="healthAndFitnessTotal"></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="col-7 py-2">
+            <i class="fa-solid fa-bag-shopping"></i> Shopping
+          </td>
+          <td class="col-5 py-2"><span id="shoppingTotal"></span></td>
+        </tr>
+        <tr>
+          <td class="col-7 py-2">
+            <i class="fa-solid fa-pizza-slice"></i> Eating Out
+          </td>
+          <td class="col-5 py-2"><span id="eatingOutTotal"></span></td>
+        </tr>
+        <tr>
+          <td class="col-7 py-2">
+            <i class="fa-solid fa-clapperboard"></i> Entertainment
+          </td>
+          <td class="col-5 py-2">
+            <span id="entertainmentTotal"></span>
+          </td>
+        </tr>
+        <tr>
+          <td class="col-7 py-2">
+            <i class="fa-solid fa-plane"></i> Travel
+          </td>
+          <td class="col-5 py-2"><span id="travelTotal"></span></td>
+        </tr>
+        <tr>
+          <td class="col-7 py-2">
+            <i class="fa-solid fa-graduation-cap"></i> Education
+          </td>
+          <td class="col-5 py-2"><span id="educationTotal"></span></td>
+        </tr>
+        <tr>
+          <td class="col-7 py-2">
+            <i class="fa-solid fa-file-circle-question"></i> Other
+          </td>
+          <td class="col-5 py-2"><span id="otherTotal"></span></td>
+        </tr>
+      </tbody>
+    </table>
+    `;
+  }
+}
+
+window.customElements.define("import-stats-table", StatsTableClass);
+
+class StatsChartsClass extends HTMLElement {
+  constructor() {
+    super();
+  }
+
+  connectedCallback() {
+    this.innerHTML = `
+    <div
+      id="carouselExampleIndicators"
+      class="carousel slide fade-in"
+      data-bs-interval="5000"
+      data-bs-touch="true"
+      data-bs-ride="carousel"
+    >
+      <!-- Accounts Navigation -->
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div id="incomesChartContainer"></div>
+        </div>
+        <div class="carousel-item">
+          <div id="expensesChartContainer"></div>
+        </div>
+      </div>
+    </div>
+    `;
+  }
+}
+
+window.customElements.define("import-stats-charts", StatsChartsClass);
