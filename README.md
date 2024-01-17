@@ -27,10 +27,11 @@ Explore the architectural foundations and design principles that drive the appli
 
 ### Release Notes
 
-###### DS Spendify Version 1.0.7
+###### DS Spendify Version 1.0.8
 
 - New "Stats" Page.
 - New Charts.
 - New "About" Page.
 - Bugs Fixes.
 - New "README" File.
+- Removed the "Transfer Money" Page.

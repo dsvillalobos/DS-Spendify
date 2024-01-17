@@ -460,7 +460,7 @@ class AboutClass extends HTMLElement {
       >
         <div class="ms-2 me-auto">
           <div class="fw-bold">Version</div>
-          DS Spendify Version 1.0.7
+          DS Spendify Version 1.0.8
         </div>
       </li>
       <li
@@ -583,7 +583,7 @@ class AccordionMenuClass extends HTMLElement {
       <div class="accordion-item">
         <h2 class="accordion-header">
           <button
-            class="accordion-button collapsed"
+            class="accordion-button"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#collapseOne"
@@ -595,7 +595,7 @@ class AccordionMenuClass extends HTMLElement {
         </h2>
         <div
           id="collapseOne"
-          class="accordion-collapse collapse"
+          class="accordion-collapse collapse show"
           data-bs-parent="#accordionExample"
         >
           <div class="accordion-body py-0">
@@ -708,38 +708,6 @@ class AccordionMenuClass extends HTMLElement {
                   class="text-decoration-none text-dark"
                   href="/Views/Expenses/Other.html"
                   ><i class="fa-solid fa-file-circle-question"></i> Other</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button
-            class="accordion-button collapsed"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#collapseThree"
-            aria-expanded="false"
-            aria-controls="collapseThree"
-          >
-            <h6 class="text-dark my-1">Transfer Money</h6>
-          </button>
-        </h2>
-        <div
-          id="collapseThree"
-          class="accordion-collapse collapse"
-          data-bs-parent="#accordionExample"
-        >
-          <div class="accordion-body py-0">
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item pb-3 pt-0">
-                <a
-                  class="text-decoration-none text-dark"
-                  href="/Views/Transactions/Transfer-Money.html"
-                  ><i class="fa-solid fa-money-bill-transfer"></i> Transfer
-                  Money</a
                 >
               </li>
             </ul>
