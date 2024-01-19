@@ -460,7 +460,7 @@ class AboutClass extends HTMLElement {
       >
         <div class="ms-2 me-auto">
           <div class="fw-bold">Version</div>
-          DS Spendify Version 1.0.8
+          DS Spendify Version 1.0.9
         </div>
       </li>
       <li
@@ -583,7 +583,7 @@ class AccordionMenuClass extends HTMLElement {
       <div class="accordion-item">
         <h2 class="accordion-header">
           <button
-            class="accordion-button"
+            class="accordion-button collapsed"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#collapseOne"
@@ -595,7 +595,7 @@ class AccordionMenuClass extends HTMLElement {
         </h2>
         <div
           id="collapseOne"
-          class="accordion-collapse collapse show"
+          class="accordion-collapse collapse"
           data-bs-parent="#accordionExample"
         >
           <div class="accordion-body py-0">
@@ -708,6 +708,37 @@ class AccordionMenuClass extends HTMLElement {
                   class="text-decoration-none text-dark"
                   href="/Views/Expenses/Other.html"
                   ><i class="fa-solid fa-file-circle-question"></i> Other</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseThree"
+            aria-expanded="true"
+            aria-controls="collapseThree"
+          >
+            <h6 class="text-dark my-1">Financial Intelligence</h6>
+          </button>
+        </h2>
+        <div
+          id="collapseThree"
+          class="accordion-collapse collapse"
+          data-bs-parent="#accordionExample"
+        >
+          <div class="accordion-body py-0">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item pb-3 pt-0">
+                <a
+                  class="text-decoration-none text-dark"
+                  href="/Views/AI-Insights.html"
+                  ><i class="fa-solid fa-robot"></i> AI Insights</a
                 >
               </li>
             </ul>
@@ -855,3 +886,35 @@ class StatsChartsClass extends HTMLElement {
 }
 
 window.customElements.define("import-stats-charts", StatsChartsClass);
+
+class StatsButtonsClass extends HTMLElement {
+  constructor() {
+    super();
+  }
+
+  connectedCallback() {
+    this.innerHTML = `
+    <div class="content-container fade-in col-md-8 mx-auto">
+      <div class="container">
+        <div class="row mb-2">
+          <div class="col d-grid gap-2">
+            <button class="btn btn-success" id="exportAsPDFButton">
+              <i class="fa-solid fa-file-pdf"></i> Export as PDF
+            </button>
+          </div>
+          <div class="col d-grid gap-2">
+            <a class="btn btn-primary" href="/Views/AI-Insights.html"
+              ><i class="fa-solid fa-robot"></i> AI Insights</a
+            >
+          </div>
+        </div>
+        <div class="text-center small fst-italic">
+          <div>Export is limited to the current chart view.</div>
+        </div>
+      </div>
+    </div>
+    `;
+  }
+}
+
+window.customElements.define("import-stats-buttons", StatsButtonsClass);

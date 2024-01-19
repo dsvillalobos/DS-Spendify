@@ -108,3 +108,26 @@ form i {
     opacity: 1;
   }
 }
+
+/*Export as PDF*/
+@media print {
+  body * {
+    visibility: hidden !important;
+  }
+
+  #statsToExport,
+  #statsToExport * {
+    visibility: visible !important;
+  }
+
+  .navbar-toggler {
+    display: none !important;
+  }
+
+  #incomesChartContainer,
+  #expensesChartContainer {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}

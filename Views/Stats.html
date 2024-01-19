@@ -39,29 +39,34 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   </head>
   <body class="mb-4">
-    <!-- Header -->
-    <import-header></import-header>
-    <!-- Content Container -->
-    <div class="content-container fade-in col-md-8 mx-auto">
-      <!-- Main Container -->
-      <main class="container">
-        <!-- Stats -->
-        <div class="text-center mb-4">
-          <!-- Icon -->
-          <i class="fa-solid fa-chart-simple view-icon mb-3"></i>
-          <!-- Title -->
-          <h2 class="fs-4 mb-1">Stats</h2>
-          <!-- Description -->
-          <p class="fst-italic fs-6 mb-0">
-            Visualize and analyze financial insights.
-          </p>
-        </div>
-        <!-- Stats Charts -->
-        <import-stats-charts></import-stats-charts>
-        <!-- Stats Table -->
-        <import-stats-table></import-stats-table>
-      </main>
+    <!-- Stats to Export -->
+    <div id="statsToExport">
+      <!-- Header -->
+      <import-header></import-header>
+      <!-- Content Container -->
+      <div class="content-container fade-in col-md-8 mx-auto">
+        <!-- Main Container -->
+        <main class="container">
+          <!-- Stats -->
+          <div class="text-center mb-4">
+            <!-- Icon -->
+            <i class="fa-solid fa-chart-simple view-icon mb-3"></i>
+            <!-- Title -->
+            <h2 class="fs-4 mb-1">Stats</h2>
+            <!-- Description -->
+            <p class="fst-italic fs-6 mb-0">
+              Visualize and analyze financial insights.
+            </p>
+          </div>
+          <!-- Stats Charts -->
+          <import-stats-charts></import-stats-charts>
+          <!-- Stats Table -->
+          <import-stats-table></import-stats-table>
+        </main>
+      </div>
     </div>
+    <!-- Stats Buttons -->
+    <import-stats-buttons></import-stats-buttons>
     <!-- JavaScript -->
     <!-- Stats JS -->
     <script src="/JavaScript/Stats.js"></script>

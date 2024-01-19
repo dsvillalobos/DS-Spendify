@@ -248,5 +248,14 @@ function generateExpensesChart() {
   });
 }
 
+const exportAsPDFButton = document.getElementById("exportAsPDFButton");
+
+exportAsPDFButton.addEventListener("click", exportAsPDF);
+
+function exportAsPDF() {
+  document.body.scrollTop = document.documentElement.scrollTop = 0;
+  window.print();
+}
+
 getAccountsTotal();
 getCategoriesTotal();
