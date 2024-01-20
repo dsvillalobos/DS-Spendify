@@ -460,7 +460,7 @@ class AboutClass extends HTMLElement {
       >
         <div class="ms-2 me-auto">
           <div class="fw-bold">Version</div>
-          DS Spendify Version 1.0.9
+          DS Spendify Version 1.1.0
         </div>
       </li>
       <li
@@ -759,7 +759,7 @@ class StatsTableClass extends HTMLElement {
 
   connectedCallback() {
     this.innerHTML = `
-    <table class="table">
+    <table class="table mb-3">
       <thead>
         <tr>
           <th class="col-7 py-2 table-primary text-light">Category</th>
@@ -841,6 +841,23 @@ class StatsTableClass extends HTMLElement {
 
 window.customElements.define("import-stats-table", StatsTableClass);
 
+class DateContainerClass extends HTMLElement {
+  constructor() {
+    super();
+  }
+
+  connectedCallback() {
+    this.innerHTML = `
+    <div
+      class="text-center small fst-italic mb-3"
+      id="dateContainer"
+    ></div>
+    `;
+  }
+}
+
+window.customElements.define("import-date-container", DateContainerClass);
+
 class StatsChartsClass extends HTMLElement {
   constructor() {
     super();
@@ -896,7 +913,7 @@ class StatsButtonsClass extends HTMLElement {
     this.innerHTML = `
     <div class="content-container fade-in col-md-8 mx-auto">
       <div class="container">
-        <div class="row mb-2">
+        <div class="row mb-3">
           <div class="col d-grid gap-2">
             <button class="btn btn-success" id="exportAsPDFButton">
               <i class="fa-solid fa-file-pdf"></i> Export as PDF

@@ -168,10 +168,10 @@ function generateIncomesChart() {
 
 function generateExpensesChart() {
   document.getElementById("expensesChartContainer").style.width = "100%";
-  document.getElementById("expensesChartContainer").style.height = "350px";
+  document.getElementById("expensesChartContainer").style.height = "420px";
 
   const expensesChartCanvas = document.createElement("canvas");
-  expensesChartCanvas.classList.add("mb-4", "pb-1");
+  expensesChartCanvas.classList.add("mb-5");
   expensesChartCanvas.setAttribute("id", "expensesChart");
 
   document
@@ -218,7 +218,7 @@ function generateExpensesChart() {
   ];
 
   const expensesChart = new Chart("expensesChart", {
-    type: "bar",
+    type: "doughnut",
     data: {
       labels: expensesChartLabels,
       datasets: [
@@ -233,7 +233,7 @@ function generateExpensesChart() {
       maintainAspectRatio: false,
       plugins: {
         legend: {
-          display: false,
+          display: true,
         },
         title: {
           display: true,
@@ -257,5 +257,18 @@ function exportAsPDF() {
   window.print();
 }
 
+function getDate() {
+  const dateContainer = document.getElementById("dateContainer");
+
+  const date = new Date();
+
+  const month = date.getMonth() + 1;
+  const day = date.getDate();
+  const year = date.getFullYear();
+
+  dateContainer.innerHTML = "Retrieved on: " + month + "-" + day + "-" + year;
+}
+
 getAccountsTotal();
 getCategoriesTotal();
+getDate();
